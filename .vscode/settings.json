@@ -1,0 +1,21 @@
+{
+  // --- Enable Prettier as default formatter ---
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // --- Format on save globally ---
+  "editor.formatOnSave": true,
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  // --- Also run ESLint fixes on save ---
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // --- Make sure ESLint validates TypeScript files ---
+  "eslint.validate": ["typescript", "typescriptreact", "javascript"],
+
+  // --- Optional: reduce noise ---
+  "eslint.quiet": true
+}
