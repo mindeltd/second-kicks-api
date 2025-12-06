@@ -76,13 +76,6 @@ export class VintedService {
     console.log('accessToken:', accessToken);
     console.log('refreshToken:', refreshToken);
 
-    const username = 'customer-mindeltd_KKgyl';
-    const password = 'Secondkicks+123';
-    const country = 'US';
-    const proxy = `pr.oxylabs.io:7777`;
-
-    const agent = new HttpsProxyAgent(`http://${username}-cc-${country}:${password}@${proxy}`);
-
     const response: VintedResponse = await firstValueFrom(
       this.httpService.get(url, {
         headers: this.headers(this.cookies(accessToken, refreshToken)),
@@ -117,6 +110,7 @@ export class VintedService {
     const response: RefreshTokenResponse = await firstValueFrom(
       this.httpService.post(url, null, {
         headers: this.headers(this.cookies(accessToken, refreshToken)),
+        httpsAgent: agent,
       })
     );
 
@@ -130,6 +124,10 @@ export class VintedService {
     return responseToken;
   }
 }
+
+const agent = new HttpsProxyAgent(
+  `http://customer-mindeltd_KKgyl-cc-US:Secondkicks+123@pr.oxylabs.io:7777`
+);
 
 interface VintedResponse {
   data: {
