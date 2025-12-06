@@ -17,7 +17,7 @@ export class ProductsService {
   async getItemsFromVintedAndSave() {
     const vintedProducts: Product[] = await this.vintedService.getItems();
     console.log(
-      `50th item : ${vintedProducts[50].item_box.second_line} ${vintedProducts[50].price.amount} ${vintedProducts[50].id}`
+      `5th item : ${vintedProducts[5].item_box.second_line} ${vintedProducts[5].price.amount} ${vintedProducts[5].id}`
     );
     await this.productService.clearAndCreateMany(vintedProducts);
   }

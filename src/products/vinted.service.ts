@@ -15,51 +15,46 @@ export class VintedService {
   // refreshToken =
   //   'eyJraWQiOiJFNTdZZHJ1SHBsQWp1MmNObzFEb3JIM2oyN0J1NS1zX09QNVB3UGlobjVNIiwiYWxnIjoiUFMyNTYifQ.eyJhcHBfaWQiOjQsImF1ZCI6ImZyLmNvcmUuYXBpIiwiY2xpZW50X2lkIjoid2ViIiwiZXhwIjoxNzYzMzk0NTAwLCJpYXQiOjE3NjI3ODk3MDAsImlzcyI6InZpbnRlZC1pYW0tc2VydmljZSIsInB1cnBvc2UiOiJyZWZyZXNoIiwic2NvcGUiOiJwdWJsaWMiLCJzaWQiOiJhZjMzMGU3NS0xNzYyNzg5NzAwIn0.ggKPj7dTVVmnU_m0GLEOt48euxx2UgJ7uPZGCILHA7PkCG4IpMun5erUNnaZy0CHCg1HKRgOKDU38ci28VRQ9bjDgTkOXg0o4Hp9z1SLRH2t408pn8MEDMtK5Xo2MxfD166WX6_Q1jpwAe79imqYUq1pWOxguxfXnV2QZ2r8tSNlXhLX_uy54wOf0iJpFrPBnGoCpLLfwOobEO1FkFGOqRCi7H__tyjhbylmPmoc_LLhV26d7Mg_wJrhxVcUQzwNZDJnXDCbEGcgq6MiVMgVLjuGc7gr6gtEv3_OQxI1hkHHOM_xvncEGPOhRA-YHt2rA9ex9uh4eBufUAg7FzBiJA';
   cookies = (accessToken: string, refreshToken: string) =>
-    '_gcl_au=1.1.1770437083.1760876445; ' +
-    '_ga=GA1.1.1824766488.1760876446; ' +
-    '__ps_r=_; ' +
-    '__ps_lu=https://www.vinted.lt/; ' +
-    '__ps_did=pscrb_0476c92b-8e41-4366-c38a-f3da50c8d1b3; ' +
-    '__ps_fva=1760876445690; ' +
-    '_fbp=fb.1.1760876445837.449774060601285638; ' +
-    'is_shipping_fees_applied_info_banner_dismissed=true; ' +
-    'domain_selected=true; ' +
-    'v_sid=9673a8a1-1760876441; ' +
-    '__cf_bm=0mjE.V5IzLb._42k3ljQCumPWse1YonQkqt3vk62cb4-1761392420-1.0.1.1-k1blANRHqoTMp.yJvi4afnfJ01NVGB2A3QL6tCmVMjH15DCcB4WUCcV0KdRpTwYAitdxMn8PlubXrMckjTJfDvirOcARlNcgbOGp5.A_RZsm.LcZ6Tb1wS_zfW2HBDIn; ' +
-    'cf_clearance=zRlQm8R1CPUOdXxDRCIewOGAn_dj4JZdg4XM8dpV2i0-1761392421-1.2.1.1-DXNsaQi9w7S1PgEHMINM4A76U3pfzY45OquIo0H2vz1BZJSNd2ZlXrf8aMW4_x7wEyznZJA3KLhpexJsOvB3chnyCC76kvqZ0xQTbKWJtgHWsprRMf03rfIX7RjSNCmV3cnvZRV8v0L.B0IkEfhpfmr5BaFKsCxEs704Oo9x3gGQbCVDMHm0_Pm68U7cszw5gKKuoP6jWizUb6562rLk2VOdJnY5Bl5VfMc0NefUunw; ' +
-    'access_token_web=' +
-    accessToken +
-    '; ' +
-    'refresh_token_web=' +
-    refreshToken +
-    '; ' +
-    'homepage_session_id=4e9ba52f-7bc1-48db-bbe3-e3306c6297b1; ' +
-    'viewport_size=1536; ' +
-    '__ps_sr=_; ' +
-    '__ps_slu=https://www.vinted.lt/session-refresh?ref_url=%2F; ' +
-    'banners_ui_state=SUCCESS; ' +
-    'OptanonConsent=isGpcEnabled=0&datestamp=Sat+Oct+25+2025+14%3A40%3A32+GMT%2B0300+(Eastern+European+Summer+Time)&version=202508.2.0&browserGpcFlag=0&isIABGlobal=false&consentId=e1c5f357-43aa-4d0b-8682-b760a3f17188&identifierType=Cookie+Unique+Id&isAnonUser=1&hosts=&interactionCount=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1%2CC0005%3A1%2CV2STACK42%3A1%2CC0035%3A1%2CC0038%3A1&genVendors=V2%3A1%2CV1%3A1%2C&intType=1&geolocation=LT%3BVL&AwaitingReconsent=false; ' +
-    '_vinted_fr_session=ODdIcjFzMzNuZGtWem52aFRWYjVDN2IxcUs5RitoblFsMzE1V2JpbUl0dFhMTHgxYkJ2THlKL2MzdEs3OXJwRjZsL0xhb3dXeDJ0cWlubnVZR096V3k1bVYwUGJWaGFZNE1BUVRveUd4aW9DZWdVNlhEbi82TWlqY1g0NkZxclIwdWE4OGFPRkxtSVlXZVRyNFN0bWFEaFQ4WW1ZK0cwTDJGQ1Znalg0RVN6bUxIU08vUWY4TWxhaHVFZjVpRGlXTmVzNFpYNEJYK215VE9lcTNMZUZkdXpXbHFqVTdldm1nRUFKTWdCb0dQdz0tLU5valVqcXo2eEg1WERRQUpnL3dFaGc9PQ%3D%3D--a61c934291a57e85a085f381027b761f5372ad3e; ' +
-    '_ga_TJGLC0BDY0=GS2.1.s1761392424$o4$g1$t1761392470$j14$l0$h0; ' +
-    '_ga_ZJHK1N3D75=GS2.1.s1761392424$o4$g1$t1761392470$j14$l0$h0';
+    // '_gcl_au=1.1.1770437083.1760876445; ' +
+    // '_ga=GA1.1.1824766488.1760876446; ' +
+    // '__ps_r=_; ' +
+    // '__ps_lu=https://www.vinted.lt/; ' +
+    // '__ps_did=pscrb_0476c92b-8e41-4366-c38a-f3da50c8d1b3; ' +
+    // '__ps_fva=1760876445690; ' +
+    // '_fbp=fb.1.1760876445837.449774060601285638; ' +
+    // 'is_shipping_fees_applied_info_banner_dismissed=true; ' +
+    // 'domain_selected=true; ' +
+    // 'v_sid=9673a8a1-1760876441; ' +
+    // '__cf_bm=0mjE.V5IzLb._42k3ljQCumPWse1YonQkqt3vk62cb4-1761392420-1.0.1.1-k1blANRHqoTMp.yJvi4afnfJ01NVGB2A3QL6tCmVMjH15DCcB4WUCcV0KdRpTwYAitdxMn8PlubXrMckjTJfDvirOcARlNcgbOGp5.A_RZsm.LcZ6Tb1wS_zfW2HBDIn; ' +
+    // 'cf_clearance=zRlQm8R1CPUOdXxDRCIewOGAn_dj4JZdg4XM8dpV2i0-1761392421-1.2.1.1-DXNsaQi9w7S1PgEHMINM4A76U3pfzY45OquIo0H2vz1BZJSNd2ZlXrf8aMW4_x7wEyznZJA3KLhpexJsOvB3chnyCC76kvqZ0xQTbKWJtgHWsprRMf03rfIX7RjSNCmV3cnvZRV8v0L.B0IkEfhpfmr5BaFKsCxEs704Oo9x3gGQbCVDMHm0_Pm68U7cszw5gKKuoP6jWizUb6562rLk2VOdJnY5Bl5VfMc0NefUunw; ' +
+    'access_token_web=' + accessToken + '; ' + 'refresh_token_web=' + refreshToken + '; ';
+  // 'homepage_session_id=4e9ba52f-7bc1-48db-bbe3-e3306c6297b1; ' +
+  // 'viewport_size=1536; ' +
+  // '__ps_sr=_; ' +
+  // '__ps_slu=https://www.vinted.lt/session-refresh?ref_url=%2F; ' +
+  // 'banners_ui_state=SUCCESS; ' +
+  // 'OptanonConsent=isGpcEnabled=0&datestamp=Sat+Oct+25+2025+14%3A40%3A32+GMT%2B0300+(Eastern+European+Summer+Time)&version=202508.2.0&browserGpcFlag=0&isIABGlobal=false&consentId=e1c5f357-43aa-4d0b-8682-b760a3f17188&identifierType=Cookie+Unique+Id&isAnonUser=1&hosts=&interactionCount=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1%2CC0005%3A1%2CV2STACK42%3A1%2CC0035%3A1%2CC0038%3A1&genVendors=V2%3A1%2CV1%3A1%2C&intType=1&geolocation=LT%3BVL&AwaitingReconsent=false; ' +
+  // '_vinted_fr_session=ODdIcjFzMzNuZGtWem52aFRWYjVDN2IxcUs5RitoblFsMzE1V2JpbUl0dFhMTHgxYkJ2THlKL2MzdEs3OXJwRjZsL0xhb3dXeDJ0cWlubnVZR096V3k1bVYwUGJWaGFZNE1BUVRveUd4aW9DZWdVNlhEbi82TWlqY1g0NkZxclIwdWE4OGFPRkxtSVlXZVRyNFN0bWFEaFQ4WW1ZK0cwTDJGQ1Znalg0RVN6bUxIU08vUWY4TWxhaHVFZjVpRGlXTmVzNFpYNEJYK215VE9lcTNMZUZkdXpXbHFqVTdldm1nRUFKTWdCb0dQdz0tLU5valVqcXo2eEg1WERRQUpnL3dFaGc9PQ%3D%3D--a61c934291a57e85a085f381027b761f5372ad3e; ' +
+  // '_ga_TJGLC0BDY0=GS2.1.s1761392424$o4$g1$t1761392470$j14$l0$h0; ' +
+  // '_ga_ZJHK1N3D75=GS2.1.s1761392424$o4$g1$t1761392470$j14$l0$h0';
 
   headers = (cookies: string) => ({
     accept: 'application/json, text/plain, */*,image/webp',
     'accept-language': 'lt-LT,lt;q=0.9,en;q=0.8',
-    priority: 'u=3',
-    referer:
-      'https://www.vinted.lt/catalog?catalog[]=1231&size_ids[]=787&size_ids[]=788&size_ids[]=789&page=4&time=1761392458',
-    'sec-ch-ua': '"Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"Windows"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-origin',
-    'user-agent':
-      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36',
-    'x-anon-id': 'e1c5f357-43aa-4d0b-8682-b760a3f17188',
-    'x-csrf-token': '75f6c9fa-dc8e-4e52-a000-e09dd4084b3e',
-    'x-money-object': 'true',
+    // priority: 'u=3',
+    // referer:
+    //   'https://www.vinted.lt/catalog?catalog[]=1231&size_ids[]=787&size_ids[]=788&size_ids[]=789&page=4&time=1761392458',
+    // 'sec-ch-ua': '"Google Chrome";v="141", "Not?A_Brand";v="8", "Chromium";v="141"',
+    // 'sec-ch-ua-mobile': '?0',
+    // 'sec-ch-ua-platform': '"Windows"',
+    // 'sec-fetch-dest': 'empty',
+    // 'sec-fetch-mode': 'cors',
+    // 'sec-fetch-site': 'same-origin',
+    // 'user-agent':
+    //   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36',
+    // 'x-anon-id': 'e1c5f357-43aa-4d0b-8682-b760a3f17188',
+    // 'x-csrf-token': '75f6c9fa-dc8e-4e52-a000-e09dd4084b3e',
+    // 'x-money-object': 'true',
 
     cookie: cookies,
   });
@@ -76,6 +71,9 @@ export class VintedService {
     const tokens = await this.tokenService.getTokens();
     if (!tokens) throw new Error('No tokens found');
     const { accessToken, refreshToken } = tokens;
+    console.log('Will call Vinted API');
+    console.log('accessToken:', accessToken);
+    console.log('refreshToken:', refreshToken);
 
     const response: VintedResponse = await firstValueFrom(
       this.httpService.get(url, {
@@ -94,7 +92,7 @@ export class VintedService {
       },
       favourite_count: item.favourite_count,
       brand_title: item.brand_title,
-      item_box: { second_line: item.item_box.second_line },
+      item_box: { second_line: item?.item_box?.second_line ?? '' },
     }));
 
     return products;
