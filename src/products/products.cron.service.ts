@@ -7,7 +7,7 @@ export class ProductsCronService {
   constructor(private readonly productsService: ProductsService) {}
 
   // Run every minute
-  @Cron(CronExpression.EVERY_30_MINUTES)
+  @Cron(CronExpression.EVERY_2_HOURS)
   async handleCron() {
     await this.productsService.getItemsFromVintedAndSave();
   }
