@@ -16,7 +16,11 @@ export class ProductService {
   //   }
 
   async clearAndCreateMany(products: Partial<ProductEntity>[]) {
+    let count = await this.repo.count();
+    console.log('count before clear:', count);
     await this.repo.clear();
+    count = await this.repo.count();
+    console.log('count after clear:', count);
     const entities = this.repo.create(products);
     return this.repo.save(entities);
   }
