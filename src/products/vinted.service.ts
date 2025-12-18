@@ -65,7 +65,7 @@ export class VintedService {
     //   'https://www.vinted.lt/api/v2/catalog/items?page=1&per_page=960&search_text=&catalog_ids=1231&order=relevance&size_ids=787,788,789&brand_ids=&status_ids=&color_ids=&material_ids=';
 
     const url =
-      'https://www.vinted.lt/api/v2/catalog/items?page=1&per_page=50&time=1764789874&search_text=&catalog_ids=1231&order=relevance&size_ids=787,788,789=&brand_ids=53,2703,14,139,1775,535,11445,5977,2369,44,162,1195,309,2239,110434,51021,3203,283953&status_ids=&color_ids=&material_ids=';
+      'https://www.vinted.lt/api/v2/catalog/items?page=1&per_page=960&time=1764789874&search_text=&catalog_ids=1231&order=relevance&size_ids=787,788,789=&brand_ids=53,2703,14,139,1775,535,11445,5977,2369,44,162,1195,309,2239,110434,51021,3203,283953&status_ids=&color_ids=&material_ids=';
 
     // 'https://www.vinted.lt/catalog?catalog[]=1231&brand_ids[]=53&brand_ids[]=14&brand_ids[]=1775&brand_ids[]=5977&brand_ids[]=1195&brand_ids[]=139&brand_ids[]=15457&brand_ids[]=11445&brand_ids[]=2239&brand_ids[]=2369&page=1&per_page=960&time=1764704008&size_ids[]=788&size_ids[]=789&size_ids[]=790';
 
